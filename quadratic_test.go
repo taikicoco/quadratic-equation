@@ -1,4 +1,4 @@
-package quadeqn
+package quadratic
 
 import (
 	"math/cmplx"
@@ -16,7 +16,7 @@ func TestQuadratic(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		gotX1, gotX2 := Quadratic(tt.a, tt.b, tt.c)
+		gotX1, gotX2 := Solve(tt.a, tt.b, tt.c)
 		if gotX1 != tt.wantX1 || gotX2 != tt.wantX2 {
 			t.Errorf("Quadratic(%v, %v, %v) = (%v, %v), want (%v, %v)",
 				tt.a, tt.b, tt.c, gotX1, gotX2, tt.wantX1, tt.wantX2)

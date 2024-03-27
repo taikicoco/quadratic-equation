@@ -1,10 +1,10 @@
-package quadeqn
+package quadratic
 
 import (
 	"math/cmplx"
 )
 
-func Quadratic(a, b, c float64) (x1, x2 complex128) {
+func Solve(a, b, c float64) (x1, x2 complex128) {
 	D := b*b - 4*a*c
 	sqrtD := cmplx.Sqrt(complex(D, 0))
 
